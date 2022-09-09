@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from "react";
+import Chatapp from "./components/chatapp";
+import UserMessage from "./components/Usermessage";
+import TextInfo from "./components/TextSum";
 
-function App() {
+const App = () => {
+  const [userList, setUserList] = useState([]);
+
+  const addHandler = (usertext) => {
+    setUserList((previousmessage) => {
+      return [
+        ...previousmessage,
+        { message: usertext, id: Math.random().toString() },
+      ];
+    });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Chatapp onAddUser={addHandler} />
+      <UserMessage chat={userList} />
+      <TextInfo />
+    </Fragment>
   );
-}
-
+};
 export default App;

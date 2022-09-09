@@ -1,0 +1,33 @@
+.summary h3 {
+  color: white;
+  font-size: 4rem;
+  float: right;
+  margin-top: -30rem;
+  margin-right: 25rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-family: Geneva, sans-serif;
+}
+.summary p {
+  color: white;
+  float: right;
+  margin-top: -24rem;
+  margin-right: 46rem;
+  font-size: 1.1rem;
+}
+
+.summary span img {
+  width: 70px;
+  height: 70px;
+}
+@media (max-width: 770px) {
+  .summary h3 {
+    display: none;
+  }
+  .summary p {
+    display: none;
+  }
+  .summary span img {
+    display: none;
+  }
+}

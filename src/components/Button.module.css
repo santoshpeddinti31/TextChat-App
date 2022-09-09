@@ -1,0 +1,11 @@
+.button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  padding: 5px;
+  background-color: rgb(5, 74, 5);
+  align-items: center;
+  text-align: center;
+}
